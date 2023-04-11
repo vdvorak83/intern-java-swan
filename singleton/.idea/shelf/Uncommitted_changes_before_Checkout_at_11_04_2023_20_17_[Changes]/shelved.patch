@@ -1,0 +1,226 @@
+Index: src/main/java/org/intern/Program.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package org.intern;\r\nimport java.util.Scanner;\r\n\r\npublic class Program {\r\n    public static void main(String[] args) {\r\n        Computer comp = new Computer();\r\n        comp.launch(\"Windows 8.1\");\r\n        System.out.println(comp.getOS().getName());\r\n\r\n        // не получится изменить ос, так как объект уже создан\r\n        comp.setOS(OS.getInstance(\"Windows 10\"));\r\n        System.out.println(comp.getOS().getName());\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/org/intern/Program.java b/src/main/java/org/intern/Program.java
+--- a/src/main/java/org/intern/Program.java	(revision f65b763f3d9d97f9266591bdc2cfd263b12a4bc0)
++++ b/src/main/java/org/intern/Program.java	(date 1680910648398)
+@@ -11,4 +11,5 @@
+         comp.setOS(OS.getInstance("Windows 10"));
+         System.out.println(comp.getOS().getName());
+     }
++
+ }
+\ No newline at end of file
+Index: ../.idea/encodings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"Encoding\">\r\n    <file url=\"file://$PROJECT_DIR$/singleton/src/main/java\" charset=\"UTF-8\" />\r\n    <file url=\"file://$PROJECT_DIR$/singleton/src/main/resources\" charset=\"UTF-8\" />\r\n    <file url=\"file://$PROJECT_DIR$/solid/dip/src/main/java\" charset=\"UTF-8\" />\r\n    <file url=\"file://$PROJECT_DIR$/solid/dip/src/main/resources\" charset=\"UTF-8\" />\r\n    <file url=\"file://$PROJECT_DIR$/solid/isp/src/main/java\" charset=\"UTF-8\" />\r\n    <file url=\"file://$PROJECT_DIR$/solid/isp/src/main/resources\" charset=\"UTF-8\" />\r\n    <file url=\"file://$PROJECT_DIR$/solid/lcp/src/main/java\" charset=\"UTF-8\" />\r\n    <file url=\"file://$PROJECT_DIR$/solid/lcp/src/main/resources\" charset=\"UTF-8\" />\r\n    <file url=\"file://$PROJECT_DIR$/solid/ocp/src/main/java\" charset=\"UTF-8\" />\r\n    <file url=\"file://$PROJECT_DIR$/solid/ocp/src/main/resources\" charset=\"UTF-8\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../.idea/encodings.xml b/../.idea/encodings.xml
+--- a/../.idea/encodings.xml	(revision f65b763f3d9d97f9266591bdc2cfd263b12a4bc0)
++++ b/../.idea/encodings.xml	(date 1680911719046)
+@@ -4,12 +4,8 @@
+     <file url="file://$PROJECT_DIR$/singleton/src/main/java" charset="UTF-8" />
+     <file url="file://$PROJECT_DIR$/singleton/src/main/resources" charset="UTF-8" />
+     <file url="file://$PROJECT_DIR$/solid/dip/src/main/java" charset="UTF-8" />
+-    <file url="file://$PROJECT_DIR$/solid/dip/src/main/resources" charset="UTF-8" />
+     <file url="file://$PROJECT_DIR$/solid/isp/src/main/java" charset="UTF-8" />
+-    <file url="file://$PROJECT_DIR$/solid/isp/src/main/resources" charset="UTF-8" />
+     <file url="file://$PROJECT_DIR$/solid/lcp/src/main/java" charset="UTF-8" />
+-    <file url="file://$PROJECT_DIR$/solid/lcp/src/main/resources" charset="UTF-8" />
+     <file url="file://$PROJECT_DIR$/solid/ocp/src/main/java" charset="UTF-8" />
+-    <file url="file://$PROJECT_DIR$/solid/ocp/src/main/resources" charset="UTF-8" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: ../factoryMethod/src/main/java/org/intern/Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../factoryMethod/src/main/java/org/intern/Main.java b/../factoryMethod/src/main/java/org/intern/Main.java
+new file mode 100644
+--- /dev/null	(date 1681231323767)
++++ b/../factoryMethod/src/main/java/org/intern/Main.java	(date 1681231323767)
+@@ -0,0 +1,7 @@
++package org.intern;
++
++public class Main {
++    public static void main(String[] args) {
++        System.out.println("Hello world!");
++    }
++}
+\ No newline at end of file
+Index: factoryMethod/pom.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/factoryMethod/pom.xml b/factoryMethod/pom.xml
+new file mode 100644
+--- /dev/null	(date 1681231264513)
++++ b/factoryMethod/pom.xml	(date 1681231264513)
+@@ -0,0 +1,17 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project xmlns="http://maven.apache.org/POM/4.0.0"
++         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
++         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
++    <modelVersion>4.0.0</modelVersion>
++
++    <groupId>org.example</groupId>
++    <artifactId>factoryMethod</artifactId>
++    <version>1.0-SNAPSHOT</version>
++
++    <properties>
++        <maven.compiler.source>19</maven.compiler.source>
++        <maven.compiler.target>19</maven.compiler.target>
++        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
++    </properties>
++
++</project>
+\ No newline at end of file
+Index: ../factoryMethod/pom.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../factoryMethod/pom.xml b/../factoryMethod/pom.xml
+new file mode 100644
+--- /dev/null	(date 1681231323742)
++++ b/../factoryMethod/pom.xml	(date 1681231323742)
+@@ -0,0 +1,17 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project xmlns="http://maven.apache.org/POM/4.0.0"
++         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
++         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
++    <modelVersion>4.0.0</modelVersion>
++
++    <groupId>org.intern</groupId>
++    <artifactId>factoryMethod</artifactId>
++    <version>1.0-SNAPSHOT</version>
++
++    <properties>
++        <maven.compiler.source>19</maven.compiler.source>
++        <maven.compiler.target>19</maven.compiler.target>
++        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
++    </properties>
++
++</project>
+\ No newline at end of file
+Index: ../.idea/compiler.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"CompilerConfiguration\">\r\n    <annotationProcessing>\r\n      <profile name=\"Maven default annotation processors profile\" enabled=\"true\">\r\n        <sourceOutputDir name=\"target/generated-sources/annotations\" />\r\n        <sourceTestOutputDir name=\"target/generated-test-sources/test-annotations\" />\r\n        <outputRelativeToContentRoot value=\"true\" />\r\n        <module name=\"srp\" />\r\n        <module name=\"lcp\" />\r\n        <module name=\"singleton\" />\r\n        <module name=\"dip\" />\r\n        <module name=\"ocp\" />\r\n        <module name=\"isp\" />\r\n      </profile>\r\n    </annotationProcessing>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../.idea/compiler.xml b/../.idea/compiler.xml
+--- a/../.idea/compiler.xml	(revision f65b763f3d9d97f9266591bdc2cfd263b12a4bc0)
++++ b/../.idea/compiler.xml	(date 1680911719031)
+@@ -6,13 +6,16 @@
+         <sourceOutputDir name="target/generated-sources/annotations" />
+         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+         <outputRelativeToContentRoot value="true" />
+-        <module name="srp" />
+-        <module name="lcp" />
+         <module name="singleton" />
+-        <module name="dip" />
+-        <module name="ocp" />
+-        <module name="isp" />
+       </profile>
+     </annotationProcessing>
++    <bytecodeTargetLevel>
++      <module name="dip" target="19" />
++      <module name="isp" target="19" />
++      <module name="lcp" target="19" />
++      <module name="ocp" target="19" />
++      <module name="solid" target="12" />
++      <module name="srp" target="12" />
++    </bytecodeTargetLevel>
+   </component>
+ </project>
+\ No newline at end of file
+Index: ../.idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"aff20576-03e3-4b7a-9bf4-dcf5dd6f3a02\" name=\"Changes\" comment=\"created examples of solid principles\">\r\n      <change afterPath=\"$PROJECT_DIR$/singleton/pom.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/singleton/src/main/java/org/intern/Computer.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/singleton/src/main/java/org/intern/OS.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/singleton/src/main/java/org/intern/Program.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/singleton/src/main/java/org/intern/Singleton.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/compiler.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/compiler.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/encodings.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/encodings.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/misc.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/misc.xml\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Interface\" />\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"develop\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitHubPullRequestSearchHistory\">{\r\n  &quot;lastFilter&quot;: {\r\n  }\r\n}</component>\r\n  <component name=\"GithubPullRequestsUISettings\">\r\n    <option name=\"selectedUrlAndAccountId\">\r\n      <UrlAndAccount>\r\n        <option name=\"accountId\" value=\"5d8edf92-6cb0-4e7e-b7f5-819f785980ff\" />\r\n        <option name=\"url\" value=\"https://github.com/vdvorak83/intern-java-swan.git\" />\r\n      </UrlAndAccount>\r\n    </option>\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"MavenImportPreferences\">\r\n    <option name=\"generalSettings\">\r\n      <MavenGeneralSettings>\r\n        <option name=\"alwaysUpdateSnapshots\" value=\"true\" />\r\n        <option name=\"mavenHome\" value=\"$PROJECT_DIR$/../../apache-maven-3.9.0\" />\r\n        <option name=\"printErrorStackTraces\" value=\"true\" />\r\n        <option name=\"usePluginRegistry\" value=\"true\" />\r\n      </MavenGeneralSettings>\r\n    </option>\r\n    <option name=\"importingSettings\">\r\n      <MavenImportingSettings>\r\n        <option name=\"workspaceImportEnabled\" value=\"true\" />\r\n      </MavenImportingSettings>\r\n    </option>\r\n  </component>\r\n  <component name=\"MavenRunner\">\r\n    <option name=\"jreName\" value=\"19\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2O1XO6WX2G6zR7FZAEhlJSx1yd1\" />\r\n  <component name=\"ProjectLevelVcsManager\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n    <option name=\"showMembers\" value=\"true\" />\r\n    <option name=\"showVisibilityIcons\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\r\n    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;19&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;C:/Users/maksp/OneDrive/Документы/GitHub/intern-java-swan&quot;,\r\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,\r\n    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,\r\n    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,\r\n    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.archetype.catalogs&quot;,\r\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\r\n  }\r\n}</component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"aff20576-03e3-4b7a-9bf4-dcf5dd6f3a02\" name=\"Changes\" comment=\"\" />\r\n      <created>1680729026411</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1680729026411</updated>\r\n      <workItem from=\"1680729027892\" duration=\"6105000\" />\r\n      <workItem from=\"1680811368613\" duration=\"542000\" />\r\n    </task>\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State>\r\n              <option name=\"FILTERS\">\r\n                <map>\r\n                  <entry key=\"branch\">\r\n                    <value>\r\n                      <list>\r\n                        <option value=\"solid\" />\r\n                      </list>\r\n                    </value>\r\n                  </entry>\r\n                </map>\r\n              </option>\r\n            </State>\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"created examples of solid principles\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"created examples of solid principles\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../.idea/workspace.xml b/../.idea/workspace.xml
+--- a/../.idea/workspace.xml	(revision f65b763f3d9d97f9266591bdc2cfd263b12a4bc0)
++++ b/../.idea/workspace.xml	(date 1680911855111)
+@@ -5,14 +5,10 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="aff20576-03e3-4b7a-9bf4-dcf5dd6f3a02" name="Changes" comment="created examples of solid principles">
+-      <change afterPath="$PROJECT_DIR$/singleton/pom.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/singleton/src/main/java/org/intern/Computer.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/singleton/src/main/java/org/intern/OS.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/singleton/src/main/java/org/intern/Program.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/singleton/src/main/java/org/intern/Singleton.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/singleton/src/main/java/org/intern/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/singleton/src/main/java/org/intern/Program.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -78,24 +74,24 @@
+     <option name="showMembers" value="true" />
+     <option name="showVisibilityIcons" value="true" />
+   </component>
+-  <component name="PropertiesComponent">{
+-  &quot;keyToString&quot;: {
+-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;19&quot;,
+-    &quot;last_opened_file_path&quot;: &quot;C:/Users/maksp/OneDrive/Документы/GitHub/intern-java-swan&quot;,
+-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.archetype.catalogs&quot;,
+-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
++  <component name="PropertiesComponent"><![CDATA[{
++  "keyToString": {
++    "RunOnceActivity.OpenProjectViewOnStart": "true",
++    "RunOnceActivity.ShowReadmeOnStart": "true",
++    "WebServerToolWindowFactoryState": "false",
++    "jdk.selected.JAVA_MODULE": "19",
++    "last_opened_file_path": "C:/Users/maksp/OneDrive/Документы/GitHub/intern-java-swan/solid",
++    "node.js.detected.package.eslint": "true",
++    "node.js.detected.package.tslint": "true",
++    "node.js.selected.package.eslint": "(autodetect)",
++    "node.js.selected.package.tslint": "(autodetect)",
++    "project.structure.last.edited": "Modules",
++    "project.structure.proportion": "0.15",
++    "project.structure.side.proportion": "0.2",
++    "settings.editor.selected.configurable": "reference.settings.project.maven.archetype.catalogs",
++    "vue.rearranger.settings.migration": "true"
+   }
+-}</component>
++}]]></component>
+   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+   <component name="TaskManager">
+     <task active="true" id="Default" summary="Default task">
+@@ -106,6 +102,8 @@
+       <updated>1680729026411</updated>
+       <workItem from="1680729027892" duration="6105000" />
+       <workItem from="1680811368613" duration="542000" />
++      <workItem from="1680910946528" duration="693000" />
++      <workItem from="1680911738623" duration="116000" />
+     </task>
+     <servers />
+   </component>
