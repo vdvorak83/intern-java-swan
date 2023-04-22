@@ -1,28 +1,20 @@
 package pattern.creation.singelton;
 
-public class Singleton {
+public final class Singleton {
     private static Singleton instance;
-    private final Database database;
+    private static Object lock = new Object();
 
-    private Singleton(Database database) {
-        if (database == null) {
-            throw new IllegalArgumentException("Database cannot be null");
-        }
-        this.database = database;
+    private Singleton() {
     }
 
-    public static Singleton getInstance(Database database) {
+    public static Singleton getInstance() {
         if (instance == null) {
-            synchronized (Singleton.class) {
+            synchronized (lock) {
                 if (instance == null) {
-                    instance = new Singleton(database);
+                    instance = new Singleton();
                 }
             }
         }
         return instance;
-    }
-
-    public Database getDatabase() {
-        return database;
     }
 }

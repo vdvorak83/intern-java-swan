@@ -1,18 +1,18 @@
 package pattern.creation.singelton;
 
 public enum Database {
-    MYSQL("MySQL"),
-    POSTGRES("PostgreSQL"),
-    ORACLE("Oracle");
+    MYSQL("MySQL Database"),
+    POSTGRESQL("PostgreSQL Database"),
+    ORACLE("Oracle Database");
 
-    private final String type;
+    private String description;
 
-    Database(String type) {
-        this.type = type;
+    Database(String description) {
+        this.description = description;
     }
 
-    public String getType() {
-        return type;
+    public String getDescription() {
+        return description;
     }
 }
 
