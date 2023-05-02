@@ -2,6 +2,13 @@ package pattern.creation.factory;
 
 public class FactoryTestCase {
     public static void main(String[] args) {
-        System.out.println("Prototype");
+        AnimalFactory dogFactory = new DogFactory();
+        AnimalFactory catFactory = new CatFactory();
+
+        Animal dog = dogFactory.createAnimal();
+        Animal cat = catFactory.createAnimal();
+
+        dog.speak();
+        cat.speak();
     }
 }
