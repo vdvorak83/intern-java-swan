@@ -4,13 +4,13 @@ public class Application {
     private OrderCoffeeForm orderCoffeeForm;
 
     public void drawOrderCoffeeForm() {
-        // Определим имя операционной системы, получив значение системной проперти через System.getProperty
+        // choosing os name, got value of system property through System.getProperty
         String osName = System.getProperty("os.name").toLowerCase();
         GUIFactory guiFactory;
 
-        if (osName.startsWith("win")) { // Для windows
+        if (osName.startsWith("win")) { // for windows
             guiFactory = new WindowsGUIFactory();
-        } else if (osName.startsWith("mac")) { // Для mac
+        } else if (osName.startsWith("mac")) { // for mac
             guiFactory = new MacGUIFactory();
         } else {
             System.out.println("Unknown OS, can't draw form :( ");
