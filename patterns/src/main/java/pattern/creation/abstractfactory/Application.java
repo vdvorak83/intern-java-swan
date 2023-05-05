@@ -3,20 +3,40 @@ package pattern.creation.abstractfactory;
 public class Application {
     private OrderCoffeeForm orderCoffeeForm;
 
-    public void drawOrderCoffeeForm() {
-        // choosing os name, got value of system property through System.getProperty
-        String osName = System.getProperty("os.name").toLowerCase();
-        GUIFactory guiFactory;
+    private enum OperatingSystem {
+        WINDOWS, MAC, UNKNOWN;
 
-        if (osName.startsWith("win")) { // for windows
-            guiFactory = new WindowsGUIFactory();
-        } else if (osName.startsWith("mac")) { // for mac
-            guiFactory = new MacGUIFactory();
-        } else {
-            System.out.println("Unknown OS, can't draw form :( ");
-            return;
+        public static OperatingSystem getCurrent() {
+            String osName = System.getProperty("os.name").toLowerCase();
+            if (osName.contains("win")) {
+                return WINDOWS;
+            } else if (osName.contains("mac")) {
+                return MAC;
+            } else {
+                return UNKNOWN;
+            }
         }
-        orderCoffeeForm = new OrderCoffeeForm(guiFactory);
+    }
+
+    public void drawOrderCoffeeForm() {
+        GUIFactory guiFactory = null;
+        switch (OperatingSystem.getCurrent()) {
+            case WINDOWS:
+                guiFactory = new WindowsGUIFactory();
+                break;
+            case MAC:
+                guiFactory = new MacGUIFactory();
+                break;
+            case UNKNOWN:
+                System.out.println("Unknown OS, can't draw form :(");
+                break;
+            default:
+                throw new IllegalStateException("Unknown operating system.");
+        }
+
+        if (guiFactory != null) {
+            orderCoffeeForm = new OrderCoffeeForm(guiFactory);
+        }
     }
 
     public static void main(String[] args) {
