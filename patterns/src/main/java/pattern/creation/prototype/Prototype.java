@@ -1,5 +1,5 @@
 package pattern.creation.prototype;
 
-public class Prototype {
-    
+public interface Prototype {
+    public Prototype clone();
 }
