@@ -1,5 +1,4 @@
 package pattern.creation.abstractfactory;
 
-public class AbstractFactory {
-    
+public interface Button {
 }
